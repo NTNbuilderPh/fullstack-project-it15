@@ -56,7 +56,6 @@ Frontend URL: `http://127.0.0.1:5173`
 
 - API documentation: [docs/API_DOCUMENTATION.md](docs/API_DOCUMENTATION.md)
 - Technologies with versions: [docs/TECHNOLOGIES.md](docs/TECHNOLOGIES.md)
-- 3-5 minute video script/guide: [docs/VIDEO_DEMO_GUIDE.md](docs/VIDEO_DEMO_GUIDE.md)
 
 ## Screenshots
 
