@@ -13,7 +13,11 @@ class AuthController extends Controller
     public function login(Request $request): JsonResponse
     {
         $validated = $request->validate([
+<<<<<<< HEAD
             'email' => ['required', 'email'],
+=======
+            'email' => ['required', 'email:rfc,dns'],
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
             'password' => ['required', 'string', 'min:6'],
         ]);
 
@@ -52,4 +56,8 @@ class AuthController extends Controller
             'message' => 'Logged out successfully.',
         ]);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7

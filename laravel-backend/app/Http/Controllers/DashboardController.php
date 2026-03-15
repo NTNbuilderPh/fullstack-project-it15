@@ -6,7 +6,10 @@ use App\Models\Course;
 use App\Models\SchoolDay;
 use App\Models\Student;
 use Illuminate\Http\JsonResponse;
+<<<<<<< HEAD
 use Illuminate\Http\Request;
+=======
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
@@ -30,12 +33,19 @@ class DashboardController extends Controller
 
         $monthExpression = match ($driver) {
             'pgsql' => "TO_CHAR(enrollment_date, 'YYYY-MM')",
+<<<<<<< HEAD
             'sqlite' => "strftime('%Y-%m', enrollment_date)",
             default => "DATE_FORMAT(enrollment_date, '%Y-%m')",
         };
 
         $data = DB::table('students')
             ->selectRaw("{$monthExpression} as month, COUNT(*) as total")
+=======
+            default => "DATE_FORMAT(enrollment_date, '%Y-%m')",
+        };
+
+        $data = Student::selectRaw("{$monthExpression} as month, COUNT(*) as total")
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
             ->groupBy('month')
             ->orderBy('month')
             ->get();
@@ -74,6 +84,7 @@ class DashboardController extends Controller
         return response()->json($data);
     }
 
+<<<<<<< HEAD
     public function weatherProxy(Request $request): JsonResponse
     {
         $validated = $request->validate([
@@ -144,6 +155,17 @@ class DashboardController extends Controller
         }
 
         $forecastResponse = Http::timeout(15)->retry(2, 500)->get('https://api.open-meteo.com/v1/forecast', [
+=======
+    public function weatherProxy(): JsonResponse
+    {
+        $latitude = env('WEATHER_LATITUDE', '7.4467');
+        $longitude = env('WEATHER_LONGITUDE', '125.8094');
+        $timezone = env('WEATHER_TIMEZONE', 'Asia/Manila');
+
+        $url = 'https://api.open-meteo.com/v1/forecast';
+
+        $response = Http::timeout(15)->retry(2, 500)->get($url, [
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
             'latitude' => $latitude,
             'longitude' => $longitude,
             'current' => 'temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m',
@@ -152,6 +174,7 @@ class DashboardController extends Controller
             'timezone' => $timezone,
         ]);
 
+<<<<<<< HEAD
         if ($forecastResponse->status() === 429) {
             return $this->rateLimitedResponse();
         }
@@ -180,3 +203,14 @@ class DashboardController extends Controller
         ], 429);
     }
 }
+=======
+        if ($response->failed()) {
+            return response()->json([
+                'message' => 'Unable to fetch weather data at the moment.',
+            ], $response->status() ?: 500);
+        }
+
+        return response()->json($response->json());
+    }
+}
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7

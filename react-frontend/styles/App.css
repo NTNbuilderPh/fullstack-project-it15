@@ -17,7 +17,11 @@
 
 body {
   margin: 0;
+<<<<<<< HEAD
   font-family: "Trebuchet MS", "Segoe UI", "Gill Sans", sans-serif;
+=======
+  font-family: Arial, Helvetica, sans-serif;
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
   color: var(--text);
   background: var(--bg);
 }
@@ -52,7 +56,11 @@ input {
 /* Login */
 .login-page {
   min-height: 100vh;
+<<<<<<< HEAD
   background: url("/backgrounds/ddnbg3.jpg") center center / cover no-repeat;
+=======
+  background: url("/davao-bg.jpg") center center / cover no-repeat;
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
 }
 
 .login-overlay {
@@ -192,6 +200,7 @@ input {
   background: var(--primary-light);
 }
 
+<<<<<<< HEAD
 .btn.secondary {
   background: #e2e8f0;
   color: #0f172a;
@@ -201,6 +210,8 @@ input {
   background: #cbd5e1;
 }
 
+=======
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
 .btn.danger {
   background: var(--danger);
   color: white;
@@ -283,7 +294,11 @@ input {
 .hero-banner {
   background:
     linear-gradient(rgba(22, 60, 140, 0.78), rgba(22, 60, 140, 0.78)),
+<<<<<<< HEAD
     url("/backgrounds/ddnbg4.jpg") center center / cover no-repeat;
+=======
+    url("/davao-bg.jpg") center center / cover no-repeat;
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
   min-height: 220px;
   border-radius: 24px;
   padding: 36px;
@@ -408,6 +423,7 @@ input {
 }
 
 /* Weather */
+<<<<<<< HEAD
 .weather-search {
   display: flex;
   flex-wrap: wrap;
@@ -436,6 +452,8 @@ input {
   font-weight: 600;
 }
 
+=======
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
 .weather-current {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -461,10 +479,13 @@ input {
   color: var(--primary);
 }
 
+<<<<<<< HEAD
 .weather-icon {
   display: inline-block;
 }
 
+=======
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
 .forecast-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -488,10 +509,13 @@ input {
   font-size: 13px;
 }
 
+<<<<<<< HEAD
 .forecast-condition {
   min-height: 36px;
 }
 
+=======
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
 .forecast-temp {
   display: flex;
   flex-direction: column;
@@ -532,7 +556,11 @@ input {
 
 /* Loading */
 .loading-wrap {
+<<<<<<< HEAD
   min-height: 180px;
+=======
+  min-height: 60vh;
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
   display: grid;
   place-items: center;
   text-align: center;
@@ -554,6 +582,7 @@ input {
   }
 }
 
+<<<<<<< HEAD
 .skeleton {
   position: relative;
   overflow: hidden;
@@ -621,6 +650,8 @@ input {
   }
 }
 
+=======
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
 /* Responsive */
 @media (max-width: 1200px) {
   .stats-grid {
@@ -694,6 +725,7 @@ input {
     grid-template-columns: 1fr 1fr;
   }
 
+<<<<<<< HEAD
   .weather-search {
     flex-direction: column;
   }
@@ -703,6 +735,8 @@ input {
     width: 100%;
   }
 
+=======
+>>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
   .navbar-left {
     align-items: flex-start;
   }
