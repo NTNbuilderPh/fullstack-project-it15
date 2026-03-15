@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # IT15/L Integrative Programming Final Project
 
 Full-stack academic dashboard built with React frontend and Laravel REST API backend.
@@ -83,4 +82,4 @@ fullstack-project-it15-main/
 ```
 =======
 # fullstack-project-it15
->>>>>>> 5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
+5459ae8ba1721fc4b8a402ad82c6f3f154a225d7
